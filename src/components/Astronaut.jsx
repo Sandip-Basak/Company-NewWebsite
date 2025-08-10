@@ -28,8 +28,9 @@ export function Astronaut(props) {
   useEffect(() => {
     ySpring.set(-1);
   }, [ySpring]);
-  useFrame(() => {
+  useFrame((state, delta) => {
     group.current.position.y = ySpring.get();
+    group.current.rotation.z += delta * 0.03;
   });
   return (
     <group
