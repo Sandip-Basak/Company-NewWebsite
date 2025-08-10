@@ -50,7 +50,7 @@ export const About = () => {
             <Card
               containerRef={grid2Container}
               style={{ rotate: "90deg", bottom: "30%", left: "70%" }}
-              text="Hyperautomation"
+              text="Hyper Automation"
             />
             <Card
               containerRef={grid2Container}
