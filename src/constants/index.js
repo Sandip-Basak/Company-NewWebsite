@@ -225,19 +225,19 @@ export const myProjects = [
   
   export const mySocials = [
     {
-      name: "WhatsApp",
-      href: "",
-      icon: "/assets/socials/whatsApp.svg",
-    },
-    {
-      name: "Linkedin",
-      href: "https://www.linkedin.com/in/ali-sanati/",
-      icon: "/assets/socials/linkedIn.svg",
+      name: "Facebook",
+      href: "#",
+      icon: "/assets/logos/facebook.png",
     },
     {
       name: "Instagram",
-      href: "https://www.instagram.com/ali.sanatidev/reels/",
-      icon: "/assets/socials/instagram.svg",
+      href: "#",
+      icon: "/assets/logos/instagram.png",
+    },
+    {
+      name: "Linkedin",
+      href: "#",
+      icon: "/assets/logos/linkedin.png",
     },
   ];
   
@@ -278,51 +278,51 @@ export const myProjects = [
   ];
   export const reviews = [
     {
-      name: "Jack",
-      username: "@jack",
-      body: "I've never seen anything like this before. It's amazing. I love it.",
+      name: "GP Shah",
+      username: "Director",
+      body: "Your team delivered an outstanding food and beverages website for Allenby. The design was sleek and intuitive, perfectly capturing our brand’s essence. The team was responsive and helped us launch quickly — a stellar experience all around!",
       img: "https://robohash.org/jack",
     },
     {
-      name: "Jill",
-      username: "@jill",
-      body: "I don't know what to say. I'm speechless. This is amazing.",
+      name: "Vikram Patel",
+      username: "Founder",
+      body: "They are our go-to partner for web and AI automation projects. Their collaborative approach and deep technical expertise made a complex project straightforward. The results have been nothing short of stellar.",
       img: "https://robohash.org/jill",
     },
     {
-      name: "John",
-      username: "@john",
-      body: "I'm at a loss for words. This is amazing. I love it.",
+      name: "Sumit Sengupta",
+      username: "Director",
+      body: "The AR game developed by them for our Zimba brand exceeded expectations. It’s engaging, innovative, and really elevated our marketing efforts. Their expertise in blending technology with creative ideas is truly out of this world.",
       img: "https://robohash.org/john",
     },
     {
-      name: "Alice",
-      username: "@alice",
-      body: "This is hands down the best thing I've experienced. Highly recommend!",
+      name: " Priya Desai",
+      username: "Marketing Head",
+      body: "Sandip's AI-powered automation tools helped revolutionize our marketing workflows. Their solutions saved us countless hours and increased engagement through smart content scheduling. Highly recommend their innovative team!",
       img: "https://robohash.org/alice",
     },
     {
-      name: "Bob",
-      username: "@bob",
-      body: "Incredible work! The attention to detail is phenomenal.",
+      name: "Ajit Kumar Sinha",
+      username: "Founder",
+      body: "They built a custom coaching management system tailored to our exact needs. Their solution perfectly streamlined our workflows and improved student management significantly. Their dedication and technical skill took us to new heights.",
       img: "https://robohash.org/bob",
     },
     {
-      name: "Charlie",
-      username: "@charlie",
-      body: "This exceeded all my expectations. Absolutely stunning!",
+      name: "Rajiv Malhotra",
+      username: "CTO",
+      body: "The team at QubitOne are pioneers in AI-driven SaaS development. They built a scalable platform that perfectly fits our growing business needs. Their forward-thinking approach and quick turnaround impressed us beyond words.",
       img: "https://robohash.org/charlie",
     },
     {
-      name: "Dave",
-      username: "@dave",
-      body: "Simply breathtaking. The best decision I've made in a while.",
+      name: "Arindam",
+      username: "Product Manager",
+      body: "We entrusted QubitOne with our company website development, and they delivered flawlessly. The site is visually stunning and functionally robust. Their attention to detail and proactive communication made the whole process smooth and enjoyable.",
       img: "https://robohash.org/dave",
     },
     {
-      name: "Eve",
-      username: "@eve",
-      body: "So glad I found this. It has changed the game for me.",
+      name: "Neha Sharma",
+      username: "CEO",
+      body: "Working with their team was a game-changer. Their AI automation solutions helped us streamline operations and scale faster than we imagined. They’re true experts in making complex tech simple and effective.",
       img: "https://robohash.org/eve",
     },
   ];

@@ -7,7 +7,7 @@ const scrollToSection = (id) => {
   const element = document.getElementById(id);
   if (!element) return;
 
-  const yOffset = -80; // height of navbar (adjust as needed)
+  const yOffset = -80;
   const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
   window.scrollTo({ top: y, behavior: "smooth" });
@@ -27,13 +27,13 @@ function Navigation({ onLinkClick }) {
         </button>
       </li>
       <li>
-        <button onClick={() => onLinkClick("projects")} className="text-neutral-400 hover:text-white transition">
-          Work
+        <button onClick={() => onLinkClick("testimonials")} className="text-neutral-400 hover:text-white transition">
+          Testimonials
         </button>
       </li>
       <li>
         <button onClick={() => onLinkClick("contact")} className="text-neutral-400 hover:text-white transition">
-          Contact
+          Let's Talk
         </button>
       </li>
     </ul>
@@ -51,12 +51,12 @@ export const Navbar = () => {
   return (
     <div className="fixed inset-x-0 z-20 w-full backdrop-blur-lg bg-primary/40">
       <div className="mx-auto c-space max-w-7xl">
-        <div className="flex items-center justify-between py-2 sm:py-0">
+        <div className="flex items-center justify-between py-4 sm:py-2">
           <a
             href="/"
             className="text-3xl font-bold text-neutral-400 hover:text-white transition-all duration-300 transform hover:scale-105 hover:shadow-sm scroll-smooth"
           >
-            AtmosFlix
+            QubitOne
           </a>
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -86,3 +86,4 @@ export const Navbar = () => {
     </div>
   );
 };
+

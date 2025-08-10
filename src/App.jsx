@@ -3,9 +3,10 @@ import { Hero } from './sections/Hero'
 import { CombinedStarryBackground } from './components/UI/CombinedStarryBackground'
 import SplashCursor from './components/UI/SplashCursor'
 import { About } from './sections/About'
-import { Projects } from './sections/Projects'
+// import { Projects } from './sections/Projects'
 import { Testimonials } from './sections/Testimonials'
 import { Contact } from './sections/Contact'
+import { Footer } from './sections/Footer'
 
 export const App = () => {
   return (
@@ -37,9 +38,9 @@ export const App = () => {
           <About />
         </section>
 
-        <section id="projects">
+        {/* <section id="projects">
           <Projects />
-        </section>
+        </section> */}
 
         <section id="testimonials">
           <Testimonials />
@@ -48,7 +49,10 @@ export const App = () => {
         <section id="contact">
           <Contact />
         </section>
+
+        <Footer />
       </div>
     </>
   )
 }
+

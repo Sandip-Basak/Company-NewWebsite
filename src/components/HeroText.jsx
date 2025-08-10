@@ -7,8 +7,8 @@ import {motion} from 'motion/react'
 export const HeroText = () => {
 
   
-  const words = ['Brand Building','Graphic Design','Website Development',
-    'Packaging Design','Social Media Marketing','Influencer Marketing'];
+  const words = ['AI-Powered SaaS Solutions','Smart Business Automation','Custom Web Applications',
+    'Intelligent Workflow Systems','AI-Driven Digital Solutions','Next-Gen Web Development','Revolutionary AI Automation'];
 
   const variants = {
     hidden:{ opacity: 0, x: -50},
@@ -19,13 +19,13 @@ export const HeroText = () => {
         {/* Desktop View */}
         <div className="flex-col hidden md:flex px-5">
             <motion.h1 
-              className="text-6xl font-medium font-['Poppins']"
+              className="text-8xl font-medium font-['Poppins']"
               variants={variants}
               initial='hidden'
               animate='visible'
               transition={{delay: 0.5}}
             >
-              AtmosFlix
+              QubitOne
             </motion.h1>
             <div className="flex flex-col items-start py-5">
               <motion.p 
@@ -35,7 +35,7 @@ export const HeroText = () => {
                 animate='visible'
                 transition={{delay: 0.8}}
               >
-                  Creative minds<br /> building success via
+                  Elevate your startup<br /> to new heights via
               </motion.p>
               <motion.div
                 variants={variants}
@@ -44,7 +44,7 @@ export const HeroText = () => {
                 transition={{delay: 1}}
               >
                 <FlipWords words={words} 
-                           className='font-black text-white text-6xl py-1'                  
+                           className='w-2xl font-semibold text-[#20E6FF] text-6xl py-1'                  
                 />
               </motion.div>
               
@@ -54,13 +54,13 @@ export const HeroText = () => {
         <div className="flex flex-col space-y-6 md:hidden">
             <div>
                   <motion.p 
-                    className="text-5xl font-black text-white"
+                    className="text-4xl font-black text-white"
                     variants={variants}
                     initial='hidden'
                     animate='visible'
                     transition={{delay: 0.8}}
                     >
-                  Where brands find
+                  Elevate your startup to new heights via
                   </motion.p>
                   <motion.div
                     variants={variants}
@@ -68,15 +68,15 @@ export const HeroText = () => {
                     animate='visible'
                     transition={{delay: 1}}
                   ><FlipWords words={words}
-                  className='font-bold text-white text-5xl'/>
+                  className='font-bold text-[#20E6FF] text-4xl'/>
                   </motion.div>
-                  <motion.p 
+                  {/* <motion.p 
                     className="text-5xl font-black text-white"
                     variants={variants}
                     initial='hidden'
                     animate='visible'
                     transition={{delay: 1.1}}
-                  >done right</motion.p>
+                  >done right</motion.p> */}
             </div>
         </div>
     </div>

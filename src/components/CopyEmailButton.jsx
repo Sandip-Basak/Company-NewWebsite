@@ -8,10 +8,8 @@ export const WhatsAppButton = () => {
 
   const handleClick = () => {
     setIsClicked(true);
-
-    const phoneNumber = "919007537321";
-    const message = encodeURIComponent("Hi, I saw your portfolio and would like to connect.");
-    const url = `https://wa.me/${phoneNumber}?text=${message}`;
+    
+    const url = `https://calendly.com/sandipbasak699/30min`;
 
     window.open(url, '_blank');
 
@@ -22,7 +20,7 @@ export const WhatsAppButton = () => {
 
   return (
     <motion.button
-      className="relative px-1 py-4 text-sm text-center rounded-full font-extralight bg-primary w-[12rem] cursor-pointer overflow-hidden"
+      className="relative px-1 py-3 text-sm text-center rounded-full font-extralight bg-primary w-[12rem] cursor-pointer overflow-hidden"
       onClick={handleClick}
       whileHover={{ y: -5 }}
       whileTap={{ scale: 1.05 }}
@@ -38,7 +36,7 @@ export const WhatsAppButton = () => {
             key="clicked"
           >
             <CheckCircle2 />
-            Opening WhatsApp...
+            Opening calendly...
           </motion.p>
         ) : (
           <motion.p
@@ -50,7 +48,7 @@ export const WhatsAppButton = () => {
             key="default"
           >
             <MessageCircle />
-            Message on WhatsApp
+            Launch a Conversation
           </motion.p>
         )}
       </AnimatePresence>
