@@ -1,4 +1,4 @@
-# Atmosflix Anikesh - Brand Portfolio
+# QubitOne - Brand Portfolio
 
 This is a brand portfolio website for Atmosflix, a company specializing in brand building, graphic design, website development, and other digital marketing services. The website is built with React, Vite, and Tailwind CSS, and features a modern, interactive design with 3D models and animations.
 
