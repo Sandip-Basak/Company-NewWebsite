@@ -23,13 +23,13 @@ export const App = () => {
 
       setTimeout(() => {
         setSplashVisible(false); // Start fade-out
-      }, 1500); // Time splash is fully visible
+      }, 1000); // Time splash is fully visible
 
       setTimeout(() => {
         setShowContent(true);
         setTimeout(() => setLoading(false), 50); // Hide loader after content is ready
-      }, 1500); // Total splash duration (fade-in + visible + fade-out)
-    }, 3500);
+      }, 1000); // Total splash duration (fade-in + visible + fade-out)
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
