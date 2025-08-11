@@ -1,17 +1,15 @@
 # QubitOne - Brand Portfolio
 
-This is a brand portfolio website for Atmosflix, a company specializing in brand building, graphic design, website development, and other digital marketing services. The website is built with React, Vite, and Tailwind CSS, and features a modern, interactive design with 3D models and animations.
+This is a brand portfolio website for QubitOne, a company that empowers ambitious startups with AI-powered SaaS solutions, intelligent automation, workflow integration, and custom web app development. The website is built with React, Vite, and Tailwind CSS, and features a modern, interactive design with 3D models and animations.
 
 ## Features
 
 *   **Services Showcase:** Detailed descriptions of the services offered, including:
-    *   Brand Building
-    *   Graphic Design
-    *   Website Development
-    *   Packaging Design
-    *   Social Media Marketing
-    *   Influencer Marketing
-*   **Project Portfolio:** A showcase of past projects with descriptions, images, and the technologies used.
+    *   AI-powered SaaS solutions
+    *   Intelligent automation
+    *   Workflow integration
+    *   Custom web app development
+*   **Project Portfolio:** A showcase of past projects with descriptions, images, and the technologies used. (Currently disabled)
 *   **Client Testimonials:** A section with testimonials from satisfied clients.
 *   **Interactive UI:** An engaging user experience with 3D models, animations, and a dynamic starry background, built with `framer-motion`, `three.js`, and `react-three/fiber`.
 *   **Contact Form:** A functional contact form for inquiries.
@@ -121,7 +119,7 @@ The project is organized as follows:
         *   `Hero.jsx`: The hero section with a 3D astronaut model.
         *   `Navbar.jsx`: The navigation bar of the website.
         *   `Process.jsx`: The "Process" section, which displays the work experience timeline.
-        *   `Projects.jsx`: The "Projects" section of the website.
+        *   `Projects.jsx`: The "Projects" section of the website. (Currently disabled in `App.jsx`)
         *   `Testimonials.jsx`: The "Testimonials" section of the website.
     *   `App.jsx`: The main application component that combines all the sections.
     *   `index.css`: This file contains all the global CSS styles.

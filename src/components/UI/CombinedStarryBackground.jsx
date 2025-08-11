@@ -36,7 +36,7 @@ export const CombinedStarryBackground = React.memo(({
   trailColor = "#57db96",
   starWidth = 12,
   starHeight = 2,
-  maxShootingStars = 50,
+  maxShootingStars = 30,
   className,
 } = {}) => {
   const [stars, setStars] = useState([]);

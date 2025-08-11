@@ -1,58 +1,98 @@
-import { Navbar } from './sections/Navbar'
-import { Hero } from './sections/Hero'
-import { CombinedStarryBackground } from './components/UI/CombinedStarryBackground'
-import SplashCursor from './components/UI/SplashCursor'
-import { About } from './sections/About'
-// import { Projects } from './sections/Projects'
-import { Testimonials } from './sections/Testimonials'
-import { Contact } from './sections/Contact'
-import { Footer } from './sections/Footer'
+import { useState, useEffect } from 'react';
+import { Navbar } from './sections/Navbar';
+import { Hero } from './sections/Hero';
+import { CombinedStarryBackground } from './components/UI/CombinedStarryBackground';
+import SplashCursor from './components/UI/SplashCursor';
+import { About } from './sections/About';
+// import { Projects } from './sections/Projects';
+import { Testimonials } from './sections/Testimonials';
+import { Contact } from './sections/Contact';
+import { Footer } from './sections/Footer';
+import PageLoader from './components/PageLoader';
 
 export const App = () => {
+  const [loading, setLoading] = useState(true);
+  const [whiteSplash, setWhiteSplash] = useState(false);
+  const [showContent, setShowContent] = useState(false);
+  const [splashVisible, setSplashVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setWhiteSplash(true);
+      setTimeout(() => setSplashVisible(true), 50); // Start fade-in
+
+      setTimeout(() => {
+        setSplashVisible(false); // Start fade-out
+      }, 1500); // Time splash is fully visible
+
+      setTimeout(() => {
+        setShowContent(true);
+        setTimeout(() => setLoading(false), 50); // Hide loader after content is ready
+      }, 1500); // Total splash duration (fade-in + visible + fade-out)
+    }, 3500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
-      {/* Fixed background */}
-      <CombinedStarryBackground
-        starDensity={0.0003}
-        minDelay={1500}
-        maxDelay={4000}
-        starColor="#33c2cc"
-        trailColor="#57db96"
-        className="fixed inset-0 z-0"
-      >
-        <div className="absolute inset-0 z-0 pointer-events-none">
-          <SplashCursor />
-        </div>
-      </CombinedStarryBackground>
+      {loading && <PageLoader />}
+      {!loading && (
+        <>
+          {/* Fixed background */}
+          <CombinedStarryBackground
+            starDensity={0.0003}
+            minDelay={1500}
+            maxDelay={4000}
+            starColor="#33c2cc"
+            trailColor="#57db96"
+            className="fixed inset-0 z-0"
+          >
+            <div className="absolute inset-0 z-0 pointer-events-none">
+              <SplashCursor />
+            </div>
+          </CombinedStarryBackground>
 
-      {/* Main content container */}
-      <div className="relative z-10 container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <Navbar />
+          {/* Main content container */}
+          <div
+            className={`relative z-10 container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 transition-all duration-500 ${
+              showContent ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
+            }`}
+          >
+            <Navbar />
 
-        {/* Add matching ids here */}
-        <section id="home">
-          <Hero />
-        </section>
+            {/* Add matching ids here */}
+            <section id="home">
+              <Hero />
+            </section>
 
-        <section id="about">
-          <About />
-        </section>
+            <section id="about">
+              <About />
+            </section>
 
-        {/* <section id="projects">
-          <Projects />
-        </section> */}
+            {/* <section id="projects">
+              <Projects />
+            </section> */}
 
-        <section id="testimonials">
-          <Testimonials />
-        </section>
+            <section id="testimonials">
+              <Testimonials />
+            </section>
 
-        <section id="contact">
-          <Contact />
-        </section>
+            <section id="contact">
+              <Contact />
+            </section>
 
-        <Footer />
-      </div>
+            <Footer />
+          </div>
+        </>
+      )}
+      {whiteSplash && (
+        <div
+          className={`fixed inset-0 bg-white z-50 transition-opacity duration-500 ${
+            splashVisible ? 'opacity-100' : 'opacity-0'
+          }`}
+        ></div>
+      )}
     </>
-  )
-}
-
+  );
+};
