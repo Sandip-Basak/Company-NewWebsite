@@ -17,21 +17,26 @@ export const App = () => {
   const [splashVisible, setSplashVisible] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const splashTimer1 = setTimeout(() => {
       setWhiteSplash(true);
-      setTimeout(() => setSplashVisible(true), 50); // Start fade-in
+      setSplashVisible(true);
+    }, 4000);
 
-      setTimeout(() => {
-        setSplashVisible(false); // Start fade-out
-      }, 1000); // Time splash is fully visible
+    const splashTimer2 = setTimeout(() => {
+      setSplashVisible(false);
+    }, 4500);
 
-      setTimeout(() => {
-        setShowContent(true);
-        setTimeout(() => setLoading(false), 50); // Hide loader after content is ready
-      }, 1000); // Total splash duration (fade-in + visible + fade-out)
-    }, 3000);
+    const loadingTimer = setTimeout(() => {
+      setLoading(false);
+      setShowContent(true);
+    }, 4000);
 
-    return () => clearTimeout(timer);
+
+    return () => {
+      clearTimeout(splashTimer1);
+      clearTimeout(splashTimer2);
+      clearTimeout(loadingTimer);
+    };
   }, []);
 
   return (
@@ -39,7 +44,6 @@ export const App = () => {
       {loading && <PageLoader />}
       {!loading && (
         <>
-          {/* Fixed background */}
           <CombinedStarryBackground
             starDensity={0.0003}
             minDelay={1500}
@@ -53,14 +57,14 @@ export const App = () => {
             </div>
           </CombinedStarryBackground>
 
+          <Navbar />
+
           {/* Main content container */}
           <div
             className={`relative z-10 container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 transition-all duration-500 ${
               showContent ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
             }`}
           >
-            <Navbar />
-
             {/* Add matching ids here */}
             <section id="home">
               <Hero />
@@ -88,8 +92,8 @@ export const App = () => {
       )}
       {whiteSplash && (
         <div
-          className={`fixed inset-0 bg-white z-50 transition-opacity duration-500 ${
-            splashVisible ? 'opacity-100' : 'opacity-0'
+          className={`fixed inset-0 bg-white z-50 transition-opacity duration-1000 ${
+            splashVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
           }`}
         ></div>
       )}
