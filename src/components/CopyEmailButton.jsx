@@ -9,7 +9,7 @@ export const WhatsAppButton = () => {
   const handleClick = () => {
     setIsClicked(true);
     
-    const url = `https://calendly.com/sandipbasak699/30min`;
+    const url = `https://calendar.app.google/u8Kz3a3QrKzipq8f9`;
 
     window.open(url, '_blank');
 
@@ -36,7 +36,7 @@ export const WhatsAppButton = () => {
             key="clicked"
           >
             <CheckCircle2 />
-            Opening calendly...
+            Opening calendar...
           </motion.p>
         ) : (
           <motion.p
