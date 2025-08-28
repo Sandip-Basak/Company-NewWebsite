@@ -9,7 +9,7 @@ export const WhatsAppButton = () => {
   const handleClick = () => {
     setIsClicked(true);
     
-    const url = `https://calendar.app.google/u8Kz3a3QrKzipq8f9`;
+    const url = `https://calendar.app.google/fwvCjjeadwVjeCZc8`;
 
     window.open(url, '_blank');
 

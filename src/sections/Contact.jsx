@@ -19,7 +19,7 @@ export const Contact = () => {
           <div className="flex items-center justify-between p-5 border border-white/10 rounded-2xl">
             <div className="flex flex-col gap-2">
               <p className="text-lg font-bold">Email</p>
-              <p className="text-neutral-400">sandipbasak699@gmail.com</p>
+              <p className="text-neutral-400">qubitone.001@gmail.com</p>
             </div>
           </div>
           {/* <div className="flex items-center justify-between p-5 border border-white/10 rounded-2xl">
