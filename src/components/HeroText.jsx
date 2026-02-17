@@ -7,8 +7,8 @@ import {motion} from 'motion/react'
 export const HeroText = () => {
 
   
-  const words = ['AI-Powered SaaS Solutions','Smart Business Automation','Custom Web Applications',
-    'Intelligent Workflow Systems','AI-Driven Digital Solutions','Next-Gen Web Development','Revolutionary AI Automation'];
+  const words = ['Intelligent AI Systems','Custom Business Automation',
+    'AI-Powered SaaS Solutions','Next-Gen AI Systems'];
 
   const variants = {
     hidden:{ opacity: 0, x: -50},
